@@ -3,8 +3,9 @@ function askgpt() {
     # Combine all arguments passed to the function into a single prompt
     local prompt="$*"
     echo "Sending request to ChatGPT with prompt: $prompt"
+
     
-    # Send the prompt to OpenAI API using curl
+    # Send the prompt to OpenAI API using curl(explained in the readme file)
     response=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $OPENAI_API_KEY" \  # Ensure your API key is stored in $OPENAI_API_KEY
